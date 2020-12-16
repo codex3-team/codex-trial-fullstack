@@ -1,9 +1,9 @@
 create table cars
 (
-	    id      uuid         not null,
-	    make    varchar(128) not null,
-	    model   varchar(128) not null,
-	    year    varchar(4)   not null
+    id      uuid         not null,
+    make    varchar(128) not null,
+    model   varchar(128) not null,
+    year    varchar(4)   not null
 );
 
 alter table cars
@@ -14754,7 +14754,8 @@ VALUES ('71107c9f-317b-4b44-9a0f-b8014d967658', 'DS', '3', '2016'),
        ('d1bffe2b-82f0-4ab6-9879-64ba0985ff7e', 'Nissan', 'NV200', '2018'),
        ('34c6bbdc-2af6-443a-bfd1-a9d6ac003544', 'Nissan', 'NV200', '2019'),
        ('9ef0067b-9577-4708-8757-00cb2e27e504', 'Nissan', 'NV200', '2020'),
-       ('e0cdd043-64d1-48c7-85ef-efe5088d82d8', 'Nissan', 'R'nessa', '2000'),('1df25803-d457-4687-b95f-e2f457abb960', 'Nissan', 'R'nessa', '2001'),
+       ('e0cdd043-64d1-48c7-85ef-efe5088d82d8', 'Nissan', 'Rnessa', '2000'),
+       ('1df25803-d457-4687-b95f-e2f457abb960', 'Nissan', 'Rnessa', '2001'),
        ('5bf97659-f7c0-4e3e-b8aa-4dfb5710b768', 'Nissan', 'Juke', '2019'),
        ('ea10290e-d09d-4092-a581-d063bbc75458', 'Nissan', 'Juke', '2020'),
        ('4ee7e912-b802-4d14-8cfd-ab46e30af4bf', 'Nissan', 'Juke', '2014'),
@@ -17593,9 +17594,7 @@ VALUES ('71107c9f-317b-4b44-9a0f-b8014d967658', 'DS', '3', '2016'),
        ('df2cbfd6-b5d4-4129-b08e-2af59a35a8c9', 'Honda', 'Edix', '2007'),
        ('9cebf7e3-f228-421c-8d4b-95815ec14d02', 'Honda', 'Edix', '2008'),
        ('f8934b8e-edfd-4397-b99e-9c5d9ff835e4', 'Honda', 'Edix', '2009'),
-       ('e299362c-2ae2-4206-b156-fa442a4c3da7', 'Honda', 'That'S', '2002'),('bc2fb0fc-e9c1-4ff3-b0d4-8cce57b78b68', 'Honda', 'That'S', '2003'),
-       ('7dce8b99-e264-4b79-9375-7c26d2df1212', 'Honda', 'That'S', '2004'),('6118586d-74d7-4a6e-9bf3-9b6be705ff80', 'Honda', 'That'S', '2005'),
-       ('d6c7f974-3263-464d-97ad-74b44f391f9b', 'Honda', 'That'S', '2006'),('668debb9-2ea2-4e54-8052-fa3de6dfec2c', 'Honda', 'That'S', '2007'),
+       ('7dce8b99-e264-4b79-9375-7c26d2df1212', 'Honda', 'That', '2004'),
        ('41e050e2-29b5-479b-b5ba-8d820c73bb18', 'Honda', 'Vamos', '2000'),
        ('7bc80bf0-e509-4bba-8be2-de8410ef86f0', 'Honda', 'Vamos', '2001'),
        ('2abc46b8-5bb0-4ee0-9374-5652fc179bf2', 'Honda', 'Vamos', '2002'),
