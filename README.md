@@ -1,6 +1,6 @@
 # Trial task for fullstack developer
 
-In this trial task, you are asked to create an application that provides a simple create-and-retrieve interface for a cars inventory. The application is required to be designed as a SPA based on React.JS for frontend and any node.js HTTP server for backend. The application must feature a grid suitable to represent a paged sorted list of cars (total number of cars in the inventory might exceed 10000 items). Besides that, the application must provide a form that allows to add a new car into the inventory. The frontend must take a reasonable time to load the data and render it, delays longer than 5 seconds are not acceptable.
+In this trial task, you are asked to create an application that provides a simple create-and-retrieve interface for a cars inventory. The application is required to be designed as an SPA based on React.JS for frontend and any node.js HTTP server for backend. The application must feature a grid suitable to represent a paged sorted list of cars (total number of cars in the inventory might exceed 10000 items). Besides that, the application must provide a form that allows to add a new car into the inventory. The frontend must take a reasonable time to load the data and render it, delays longer than 5 seconds are not acceptable.
 
 Please use the data dump provided within the repository to have a reference of the application's domain model.
 
