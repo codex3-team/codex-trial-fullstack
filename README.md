@@ -12,6 +12,6 @@ Your submission must contain the following artifacts besides the application cod
 
 Please consider using PostreSQL as database engine. You are free to alter database schema as needed - adding indices, triggers, functions, etc.
 
-#Submission delivery
+# Submission delivery
 
 Please fork this repository and create a pull request once your submission is ready.
