@@ -11,3 +11,7 @@ Your submission must contain the following artifacts besides the application cod
 * docker-compose.yml descriptor that would allow to run both parts of the application locally
 
 Please consider using PostreSQL as database engine. You are free to alter database schema as needed - adding indices, triggers, functions, etc.
+
+#Submission delivery
+
+Please fork this repository and create a pull request once your submission is ready.
