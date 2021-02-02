@@ -1,7 +1,10 @@
 import { useState } from 'react'
+import { useRouter } from 'next/router'
 import Footer from '../components/footer'
+import Menu from '../components/menu'
 
 export default function New() {
+    const router = useRouter()
     const [disabled, setDisabled] = useState(false)
 
     async function addCar(e) {
@@ -20,20 +23,19 @@ export default function New() {
             body: JSON.stringify(formData)
         })
         const results = await resp.json()
+        setDisabled(false)
 
         if (results.errors && results.errors.length) {
-            console.log(JSON.stringify(results.errors))
+            console.warn(JSON.stringify(results.errors))
         } else if (results.data) {
-            console.log(results.data)
-            // @TODO
-            // form.reset()
+            router.push('/cars')
         }
-
-        setDisabled(false)
     }
 
     return (
         <div className="flex flex-col min-h-screen">
+            <Menu></Menu>
+
             <div className="min-w-full mx-auto sm:px-6 lg:px-8 bg-gray-100">
                 <h1 className="text-6xl font-bold py-10 text-center">New</h1>
                 <div className="md:grid md:grid-cols-3 md:gap-6 pb-10">
@@ -71,7 +73,8 @@ export default function New() {
                                 </div>
                             </div>
                             <div className="px-4 py-3 bg-gray-50 text-right sm:px-6">
-                                <button type="submit" className="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" disabled={disabled}>Save</button>
+                                <button type="submit" className={"inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 "
+                                    + (disabled ? '' : 'hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500')} disabled={disabled}>Save</button>
                             </div>
                             </div>
                         </form>

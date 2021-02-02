@@ -1,14 +1,9 @@
-import Head from 'next/head'
 import Link from 'next/link'
 import Footer from '../components/footer'
 
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen py-2">
-      <Head>
-        <title>Cars</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
       <main className="flex flex-col justify-center flex-1 px-20 bg-gray-50">
         <div className="min-w-full mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 lg:flex lg:items-center lg:justify-evenly">
           <h2 className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">

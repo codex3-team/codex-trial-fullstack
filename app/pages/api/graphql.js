@@ -7,7 +7,7 @@ const typeDefs = gql`
     cars(offset: Int, limit: Int): [Car!]!
   }
   type Mutation {
-    insertCar(make: String!, model: String!, year: String!): Car
+    insertCar(make: String!, model: String!, year: String!): Car!
   }
   type Car {
     id: ID!
@@ -16,38 +16,48 @@ const typeDefs = gql`
     year: String
   }
 `
-const knex = getKnex() 
+const knex = getKnex()
+const HOUR = 1 * 1000 * 60 * 60
+const cache = require('memory-cache')
 const resolvers = {
   Query: {
     total(_parent, _args, _ctx, _info) {
-      // @TODO cache
-      console.log('total graphql knex is called')
+      const cached = cache.get('total')
 
-      return knex
+      if (cached) {
+        return Promise.resolve(cached)
+      } else {
+        return knex
         .table(process.env.TABLE_NAME)
         .count()
-        .then(row => row[0].count)
+        .then(row => {
+          const total = row[0].count
+          cache.put('total', total, HOUR)
+
+          return row[0].count
+        })
+      }
     },
     cars(_parent, args, _ctx, _info) {
-      console.log('cars graphql knex is called', args)
-
       return knex
         .table(process.env.TABLE_NAME)
         .select()
-        .orderBy('id', 'asc')
+        .orderBy('year', 'desc')
         .limit(args.limit || process.env.NEXT_PUBLIC_SIZE)
         .offset(args.offset || 0)
     }
   },
   Mutation: {
     insertCar(_parent, args, _ctx, _info) {
-      console.log('insertCar graphql knex is called', args)
-
       return knex
         .insert(args)
         .returning('id')
         .into(process.env.TABLE_NAME)
-        .then(res => { id: res[0] })
+        .then(res => {
+          cache.del('total')
+
+          return { id: res[0] }
+        })
     }
   }
 }

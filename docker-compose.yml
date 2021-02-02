@@ -1,6 +1,8 @@
 services:
   app:
-    build: .
+    build:
+      context: ./app
+    working_dir: /app
     container_name: app
     network_mode: service:db
   db:
