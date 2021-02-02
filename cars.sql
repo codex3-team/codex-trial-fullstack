@@ -1,14 +1,16 @@
-create table cars
+CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
+
+CREATE TABLE cars
 (
-    id      uuid         not null,
-    make    varchar(128) not null,
-    model   varchar(128) not null,
-    year    varchar(4)   not null
+    id      UUID         NOT NULL DEFAULT uuid_generate_v4(),
+    make    VARCHAR(128) NOT NULL,
+    model   VARCHAR(128) NOT NULL,
+    year    VARCHAR(4)   NOT NULL
 );
 
-alter table cars
-    add constraint cars_pk
-        primary key (id);
+ALTER TABLE cars
+    ADD CONSTRAINT cars_pk
+        PRIMARY KEY (id);
 
 INSERT INTO cars (id, make, model, year)
 VALUES ('71107c9f-317b-4b44-9a0f-b8014d967658', 'DS', '3', '2016'),

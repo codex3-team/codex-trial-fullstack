@@ -1,0 +1,23 @@
+{
+  "name": "app",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "apollo-server-micro": "2.11.0",
+    "autoprefixer": "^10.0.4",
+    "graphql": "14.6.0",
+    "knex": "0.21.6",
+    "next": "latest",
+    "pg": "8.4.1",
+    "postcss": "^8.1.10",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "swr": "^0.4.1",
+    "tailwindcss": "^2.0.2"
+  }
+}
