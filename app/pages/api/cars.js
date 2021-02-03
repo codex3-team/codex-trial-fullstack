@@ -1,7 +1,7 @@
 import { graphql } from 'graphql'
 import { schema } from './graphql'
 
-const queryCars = `
+export const queryCars = `
     query($offset: Int, $limit: Int) {
         total
         cars(offset: $offset, limit: $limit) {

@@ -34,7 +34,7 @@ const resolvers = {
           const total = row[0].count
           cache.put('total', total, HOUR)
 
-          return row[0].count
+          return total
         })
       }
     },

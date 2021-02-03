@@ -17,9 +17,6 @@ function Cars() {
             const resp = await fetch(`/api/cars?p=${p}`)
             const results = await resp.json()
 
-            // @TODO if there is more effective way of calling
-            console.log('cars useEffect is called')
-
             if (results.errors && results.errors.length) {
                 console.warn(JSON.stringify(results.errors))
                 setCars(false)
