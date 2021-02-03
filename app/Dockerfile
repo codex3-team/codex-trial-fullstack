@@ -5,7 +5,7 @@ WORKDIR /app
 
 COPY . .
 
-RUN npm ci --production && \
+RUN npm i && \
     npm run build
 
 # Run app

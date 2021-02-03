@@ -18,6 +18,8 @@ const typeDefs = gql`
 `
 const knex = getKnex()
 const HOUR = 1 * 1000 * 60 * 60
+
+// TS isn't fully supported for memory-cache
 const cache = require('memory-cache')
 const resolvers = {
   Query: {
@@ -30,7 +32,7 @@ const resolvers = {
         return knex
         .table(process.env.TABLE_NAME)
         .count()
-        .then(row => {
+        .then((row: any) => {
           const total = row[0].count
           cache.put('total', total, HOUR)
 
@@ -53,7 +55,7 @@ const resolvers = {
         .insert(args)
         .returning('id')
         .into(process.env.TABLE_NAME)
-        .then(res => {
+        .then((res: any) => {
           cache.del('total')
 
           return { id: res[0] }

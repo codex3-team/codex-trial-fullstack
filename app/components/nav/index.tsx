@@ -1,20 +1,20 @@
-import NavItem from './item'
-import NavSeparator from './separator'
+import NavItem from './Item'
+import NavSeparator from './Separator'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { getPages, getRandomId } from '../../lib/pag'
 
 export default function Nav({ total = 0 }) {
   const router = useRouter()
-  const size = Number(process.env.NEXT_PUBLIC_SIZE)
-  const p = Number(router.query.p || 1)
-  const pageCount = Math.ceil(total / size)
+  const size: number = +process.env.NEXT_PUBLIC_SIZE
+  const p: number = +(router.query.p || 1)
+  const pageCount: number = Math.ceil(total / size)
 
   // tips
-  const start = Number((p - 1) * size)
-  const end = start + size
-  const prev = (p - 1) <= 0 ? 1 : (p - 1)
-  const next = (p + 1) >= pageCount ? pageCount : (p + 1)
+  const start: number = +((p - 1) * size)
+  const end: number = start + size
+  const prev: number = (p - 1) <= 0 ? 1 : (p - 1)
+  const next: number = (p + 1) >= pageCount ? pageCount : (p + 1)
 
   const getNavContents = () => {
     return getPages(p, pageCount)

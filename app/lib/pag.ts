@@ -1,13 +1,13 @@
 export function getRandomId() {
-    return Math.random(2e10).toString().substr(2)
+    return Math.random().toString().substr(2)
 }
 
-const getRange = (start, end) => {
+const getRange = (start: number, end: number) => {
   return Array(end - start + 1)
-    .fill()
+    .fill(0)
     .map((_v, i) => start + i)
 }
-export function getPages(currentPage, pageCount) {
+export function getPages(currentPage: number, pageCount: number) {
   let delta = 0
   if (pageCount <= 7) {
       // delta === 7: [1 2 3 4 5 6 7]
@@ -32,7 +32,7 @@ export function getPages(currentPage, pageCount) {
       ? getRange(Math.min(range.start, pageCount - delta), Math.min(range.end, pageCount))
       : getRange(1, Math.min(pageCount, delta + 1))
 
-  const withDots = (value, pair) => (pages.length + 1 !== pageCount ? pair : [value])
+  const withDots = (value: number, pair: Array<any>) => (pages.length + 1 !== pageCount ? pair : [value])
 
   if (pages[0] !== 1) {
       pages = withDots(1, [1, '...']).concat(pages)

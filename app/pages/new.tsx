@@ -1,13 +1,13 @@
 import { useState } from 'react'
 import { useRouter } from 'next/router'
-import Footer from '../components/footer'
-import Menu from '../components/menu'
+import Footer from '../components/Footer'
+import Menu from '../components/Menu'
 
 export default function New() {
     const router = useRouter()
     const [disabled, setDisabled] = useState(false)
 
-    async function addCar(e) {
+    async function addCar(e: any) {
         e.preventDefault()
         setDisabled(true)
 

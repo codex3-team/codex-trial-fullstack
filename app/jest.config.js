@@ -5,9 +5,11 @@ module.exports = {
         '!**/node_modules/**',
     ],
     setupFiles: ['./jest.setup.js'],
-    testPathIgnorePatterns: ['/node_modules/', '/.next/'],
+    moduleFileExtensions: ['ts', 'tsx', 'js', 'json', 'jsx'],
+    testRegex: '(/__tests__/.*|(\\.|/)(test|spec))\\.(ts|tsx)?$',
+    testPathIgnorePatterns: ['/node_modules/', '/.next/', '/build/'],
     transform: {
-        '^.+\\.(js|jsx|ts|tsx)$': ['./node_modules/babel-jest', { configFile: './jest.babel.js' }]
+        '^.+\\.(js|jsx|ts|tsx)$': ['babel-jest', { configFile: './jest.babel.js' }]
     },
     transformIgnorePatterns: [
         '/node_modules/',
