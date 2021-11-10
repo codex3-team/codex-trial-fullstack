@@ -43,3 +43,9 @@ Thumbs.db
 *.mov
 *.wmv
 
+# Gradle files
+!gradle-wrapper.jar
+.gradle
+**/build/*
+.gradle/
+
