@@ -15,6 +15,6 @@ version=1.1
 
 dependencies {
 
-    implementation project(':api')
+    implementation project(':model'), project(':api')
     implementation 'org.springframework.boot:spring-boot-starter-web'
 }
