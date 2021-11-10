@@ -1,0 +1,10 @@
+plugins {
+    id 'java-library'
+}
+
+version = '0.0.1-SNAPSHOT'
+archivesBaseName = 'codex-api'
+
+dependencies {
+    implementation "org.springframework.boot:spring-boot-starter-web"
+}
