@@ -1,2 +1,22 @@
 server:
   port: 8008
+  servlet:
+    context-path: /codex/api
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/codex-db
+    username: alesander
+    password: CodexChallenge
+    hikari:
+      idleTimeout: 15000
+      maximumPoolSize: 20
+      maxLifetime: 600000
+      minimumIdle: 2
+  jpa:
+    show-sql: false
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        ddl-auto: validate
+      generate-ddl: true
