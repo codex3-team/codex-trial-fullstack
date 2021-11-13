@@ -19,4 +19,10 @@ spring:
       hibernate:
         dialect: org.hibernate.dialect.PostgreSQLDialect
         ddl-auto: validate
-      generate-ddl: true
+      generate-ddl: false
+
+  flyway:
+    enabled: true
+    baseline-on-migrate: true
+    check-location: false
+    locations: [ 'classpath:db/migration' ]
