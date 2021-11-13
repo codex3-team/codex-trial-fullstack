@@ -1,6 +1,5 @@
-package io.codex.modeldb.service;
+package io.codex.model.service;
 
-import io.codex.model.service.CarModelService;
 import org.springframework.stereotype.Service;
 
 @Service
