@@ -17,4 +17,6 @@ dependencies {
 
     implementation project(':model'), project(':model-db'), project(':api')
     implementation 'org.springframework.boot:spring-boot-starter-web'
+
+    implementation 'org.flywaydb:flyway-core:7.14.1'
 }
