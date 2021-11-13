@@ -1,3 +1,0 @@
-include 'service', 'model'
-include 'model-db'
-include 'api'
