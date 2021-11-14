@@ -1,0 +1,67 @@
+{
+  "content": [
+    {
+      "id": "16e21551-ec84-49c4-b5ab-c9ba0af32e3b",
+      "make": "AC",
+      "model": "Cobra",
+      "year": "2000"
+    },
+    {
+      "id": "6839b3ac-9306-4a94-a3be-108a6339d855",
+      "make": "AC",
+      "model": "Cobra",
+      "year": "2001"
+    },
+    {
+      "id": "659676be-3355-439c-9e75-0b014ed796bf",
+      "make": "AC",
+      "model": "378 GT Zagato",
+      "year": "2012"
+    },
+    {
+      "id": "f69ab8ed-6d09-4c50-949a-0570009e2387",
+      "make": "AC",
+      "model": "Cobra",
+      "year": "2003"
+    },
+    {
+      "id": "32f4a4d9-5cf3-40b8-983f-4d3d98292a0c",
+      "make": "AC",
+      "model": "Aceca",
+      "year": "2000"
+    },
+    {
+      "id": "63ca50fd-f17d-4fa9-bb9b-2416c90c6327",
+      "make": "AC",
+      "model": "Cobra",
+      "year": "2013"
+    },
+    {
+      "id": "41c654b2-f232-414a-9a92-cbfeb7b95361",
+      "make": "Acura",
+      "model": "RDX",
+      "year": "2017"
+    },
+    {
+      "id": "c342fa31-6c9a-47c6-a9e8-5da37c150baa",
+      "make": "Acura",
+      "model": "RDX",
+      "year": "2016"
+    },
+    {
+      "id": "5c7a1aa6-c5cf-40ee-9cf9-d5564130c33b",
+      "make": "Acura",
+      "model": "RDX",
+      "year": "2018"
+    },
+    {
+      "id": "885e0f4b-5d76-4afc-acb0-826ee746d515",
+      "make": "Acura",
+      "model": "RDX",
+      "year": "2020"
+    }
+  ],
+  "currentPage": 1,
+  "totalPages": 2298,
+  "totalOfItems": 22974
+}
