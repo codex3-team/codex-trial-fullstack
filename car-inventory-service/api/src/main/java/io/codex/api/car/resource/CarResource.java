@@ -20,7 +20,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 @Tag(
-    name = "Endpoint to submit and query cars"
+    name = "Endpoint to add and query cars"
 )
 @RequestMapping(
     value = "/v1/cars"

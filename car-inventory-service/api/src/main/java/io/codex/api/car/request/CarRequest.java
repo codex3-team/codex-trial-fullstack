@@ -1,9 +1,16 @@
 package io.codex.api.car.request;
 
+import javax.validation.constraints.NotNull;
+
 public class CarRequest {
 
+    @NotNull(message = "Make is required")
     private String make;
+
+    @NotNull(message = "Model is required")
     private String model;
+
+    @NotNull(message = "Year is required")
     private String year;
 
     protected CarRequest() {
