@@ -5,7 +5,7 @@ server:
 
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/codex-db
+    url: jdbc:postgresql://postgresql-service:5432/codex-db
     username: alesander
     password: CodexChallenge
     hikari:
@@ -35,3 +35,25 @@ springdoc:
   swagger-ui:
     path: /swagger-ui.html
     display-request-duration: true
+
+#Enable a few actuator metrics
+management:
+  endpoint:
+    health:
+      show-details: always
+      enabled: true
+  server:
+    port: 8090
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  health:
+    diskspace:
+      enabled: false
+  metrics:
+    distribution:
+      percentiles-histogram:
+        http:
+          server:
+            requests: true
