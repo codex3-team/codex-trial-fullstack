@@ -1,13 +1,17 @@
 import React from 'react'
-import { CarsPage } from './app/pages/cars'
-
+import { Container } from '@material-ui/core'
+import { CarsPage } from './pages/cars'
+import useWindowSize from './hooks/useWindowSize'
 
 function App() {
+
+  const { width } = useWindowSize()
+
   return (
-    <div className="App">
+    <Container maxWidth='xl' style={{ maxWidth: width }}>
       <CarsPage />
-    </div>
-  );
+    </Container>
+  )
 }
 
 export default App
