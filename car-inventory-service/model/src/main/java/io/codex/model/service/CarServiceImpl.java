@@ -26,7 +26,7 @@ public class CarServiceImpl implements CarService {
     @Override
     public Map<String, Object> findAll(Integer page, Integer size, String... sort) {
 
-        final var pageRequest = PageRequest.of(page, size, Sort.by(sort));
+        final var pageRequest = PageRequest.of(page, size, Sort.by(sort).ascending());
         final var currentPageOfCars = carRepository.findAll(pageRequest);
 
         if(!currentPageOfCars.hasContent()){
