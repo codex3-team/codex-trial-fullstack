@@ -1,0 +1,8 @@
+
+# Dockerfile local for spinning up the project locally and for impatient :)
+
+FROM adoptopenjdk/openjdk11:alpine AS deployable
+
+COPY service/build/libs/*.jar /app/service.jar
+
+CMD [ "java", "-jar", "/app/service.jar" ]

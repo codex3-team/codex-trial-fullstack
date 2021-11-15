@@ -1,0 +1,22 @@
+spring:
+  profiles:
+    active: integrationTest
+
+  datasource:
+    url: jdbc:tc:postgresql:11.1:///tests-db
+    username: user
+    password: password
+    driver-class-name: org.testcontainers.jdbc.ContainerDatabaseDriver
+
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        ddl-auto: validate
+
+  flyway:
+    enabled: true
+    baseline-on-migrate: true
+    check-location: true
+    locations: ['classpath:db/migration']

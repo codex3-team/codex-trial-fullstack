@@ -1,0 +1,21 @@
+version: "3.7"
+
+services:
+  car-inventory-service:
+    container_name: car-inventory-service
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    ports:
+      - "8008:8008"
+      - "8090:8090"
+      - "5005:5005"
+    depends_on:
+      - postgresql-service
+    networks:
+      - credentials_network
+    command: java -agentlib:jdwp=transport=dt_socket,address=*:5005,server=y,suspend=n -jar /app/service.jar
+
+networks:
+  credentials_network:
+    driver: bridge
