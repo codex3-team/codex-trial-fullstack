@@ -6,7 +6,7 @@ import { Cars } from '../../components/cars'
 const CarsPage = () => {
     return (
         <Fragment>
-            <Box paddingTop={6}>
+            <Box paddingTop={2}>
                 <Typography variant="h3" component="div" gutterBottom>
                     Car Inventory
                 </Typography>

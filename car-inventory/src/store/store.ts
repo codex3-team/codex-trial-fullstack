@@ -1,9 +1,11 @@
 import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit'
 import carSlice from './slices/carSlice'
+import createCarModalSlice from './slices/createCarModalSlice'
 
 export const store = configureStore({
   reducer: {
-    carSlice
+    carSlice,
+    createCarModalSlice
   },
 });
 
